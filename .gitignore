@@ -1,0 +1,21 @@
+# Configuración local (rutas de tu equipo, tema, idioma, tamaños de ventana)
+config.json
+
+# Registros
+*.log
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Compilación del .exe (PyInstaller)
+build/
+dist/
+*.spec
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store

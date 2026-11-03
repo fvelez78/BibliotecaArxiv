@@ -1,0 +1,49 @@
+BIBLIOTECA arXiv — app de escritorio (versión 3.1)
+=================================================
+
+INSTALAR / ACTUALIZAR
+1. Descomprime esta carpeta encima de la anterior (por ejemplo
+   D:\Estadistica\Python\BibliotecaArxiv). Tu config.json se conserva.
+2. Doble clic en  Iniciar.bat
+   (la primera vez instala PySide6 y PyMuPDF; necesita internet).
+
+NOVEDADES DE LA VERSIÓN 3.1
+- Vista previa grande a la derecha, con botones para pasar de página.
+- La ficha del artículo (datos, etiquetas, resumen y notas) va debajo de la lista.
+- La app recuerda el tamaño de los paneles.
+- README.md, .gitignore y requirements.txt para el repositorio de GitHub.
+
+NOVEDADES DE LA VERSIÓN 3
+- Barra de iconos con las funciones principales (se oculta en Ver > Barra de iconos).
+- Tema claro y oscuro: botón "Tema" de la barra o Ver > Tema. Cambia al instante.
+- Idioma: Ver > Idioma / Language > Español | English. Se aplica al reiniciar.
+- Agregar (Ctrl+N): pega códigos o enlaces de arXiv; los descarga, clasifica y cataloga.
+- Importar PDFs (Ctrl+I): elige archivos o una carpeta. La app lee las dos primeras
+  páginas para identificar cada PDF aunque tenga otro nombre:
+    1) nombre del archivo, 2) sello de arXiv, 3) DOI de arXiv, 4) DOI de revista
+    (consulta OpenAlex), 5) título (busca en arXiv y en OpenAlex).
+  Antes de importar muestra la lista para que confirmes. Los artículos que no son de
+  arXiv van a la carpeta "Otros (no arXiv)" con su revista, DOI y resumen.
+  Si un artículo ya estaba en el catálogo pero sin PDF, lo vuelve a vincular.
+- Monitor (Ctrl+M): registra temas a seguir en arXiv.
+    * Cada tema: palabras o frases (se buscan en título y resumen), categorías y
+      autores opcionales, frecuencia diaria o semanal.
+    * La app revisa los temas al abrirse (si les toca) y muestra "Monitor (n)".
+    * "Programar en Windows": revisa todos los días aunque la app esté cerrada
+      (Programador de tareas de Windows) y avisa con una notificación.
+      Se quita con el botón "Quitar".
+    * En la ventana del monitor: marca los artículos y "Descargar marcados a la
+      biblioteca", o márcalos como vistos / descártalos.
+
+TODO LO ANTERIOR SIGUE IGUAL
+Favoritos, estados de lectura, etiquetas, notas, portadas, BibTeX, versiones nuevas,
+palabras clave y duplicados (ver Ayuda > Atajos de teclado).
+
+ARCHIVOS
+- app.py, dialogos.py, datos.py, tareas.py, bibtex.py, temas.py, i18n.py, i18n_en.py
+- monitor.py            revisión automática sin abrir la app (la usa Windows)
+- renombrar_arxiv.py    la lógica del script de línea de comandos
+- Iniciar.bat           lanzador
+- config.json           se crea solo (carpeta, vista, tema, idioma)
+- monitor.log           registro de las revisiones automáticas
+- errores.log           solo aparece si algo falla; envíalo para revisarlo
